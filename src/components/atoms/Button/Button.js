@@ -2,8 +2,9 @@ import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   padding: 0;
-  background-color: yellow;
-  width: ${({ width }) => width || '200px'};
+  /* background-color: ${({ color }) => color || 'yellow'}; */
+  background-color: ${({ theme }) => theme.tertiary};
+  width: 200px;
   height: 50px;
   border: none;
   border-radius: 50px;
