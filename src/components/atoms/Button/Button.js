@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   padding: 0;
-  /* background-color: ${({ color }) => color || 'yellow'}; */
-  background-color: ${({ theme }) => theme.tertiary};
+  background-color: ${({ theme }) => theme.primary};
   width: 200px;
   height: 50px;
   border: none;
