@@ -1,7 +1,7 @@
 export const theme = {
-  primary: 'yellow',
-  secondary: 'cadetblue',
-  tertiary: 'green',
+  note: 'yellow',
+  twitter: 'cadetblue',
+  article: 'green',
   grey100: 'hsl(0, 0%, 98%)',
   grey200: 'hsl(0, 0%, 90%)',
   grey300: 'hsl(0, 0%, 70%)',
