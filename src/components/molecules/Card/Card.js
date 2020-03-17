@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Heading from 'components/atoms/Heading/Heading';
 import Button from 'components/atoms/Button/Button';
+import LinkIcon from 'assets/icons/link.svg';
 
 const StyledWrapper = styled.div`
   min-height: 380px;
@@ -16,8 +17,13 @@ const StyledWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
+  position: relative;
   padding: 17px 30px;
   background-color: ${({ activeColor, theme }) => (activeColor ? theme[activeColor] : 'white')};
+
+  :first-of-type {
+    z-index: 100;
+  }
 
   ${({ flex }) =>
     flex &&
@@ -25,6 +31,7 @@ const InnerWrapper = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
     `}
 `;
 
@@ -38,11 +45,40 @@ const StyledHeading = styled(Heading)`
   margin: 5px 0 0;
 `;
 
+const StyledAvatar = styled.img`
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 4px solid ${({ theme }) => theme.twitter};
+  border-radius: 50%;
+  right: 40px;
+  top: 50px;
+`;
+
+const StyledLinkButton = styled.a`
+  position: absolute;
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: white;
+  background: white url(${LinkIcon}) no-repeat;
+  background-size: 65%;
+  background-position: 50%;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+`;
+
 const Card = ({ cardType }) => (
   <StyledWrapper>
     <InnerWrapper activeColor={cardType}>
-      <StyledHeading>Hello Roman</StyledHeading>
+      <StyledHeading>First note</StyledHeading>
       <DateInfo>3 days</DateInfo>
+      {cardType === 'twitter' && <StyledAvatar src="https://avatars.io/twitter/dan_abramov" />}
+      {cardType === 'article' && (
+        <StyledLinkButton href="https://www.youtube.com/channel/UCVhEjiCLn2v4MEt3Q4T2iaA" />
+      )}
     </InnerWrapper>
     <InnerWrapper flex>
       <Paragraph>
