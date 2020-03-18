@@ -1,5 +1,5 @@
 export const theme = {
-  note: 'yellow',
+  note: 'hsl(57, 100%, 48%)',
   twitter: 'cadetblue',
   article: 'green',
 
