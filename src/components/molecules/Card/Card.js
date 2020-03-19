@@ -52,7 +52,7 @@ const StyledAvatar = styled.img`
   border: 4px solid ${({ theme }) => theme.twitter};
   border-radius: 50%;
   right: 40px;
-  top: 50px;
+  top: 15px;
 `;
 
 const StyledLinkButton = styled.a`
@@ -66,25 +66,21 @@ const StyledLinkButton = styled.a`
   background-size: 65%;
   background-position: 50%;
   top: 50%;
-  right: 40px;
+  right: 15px;
   transform: translateY(-50%);
 `;
 
-const Card = ({ cardType }) => (
+// const Card = ({ cardType, title, created, twitterName, articleUrl, content }) => (
+const Card = ({ cardType, title, created, twitterName, articleUrl, content }) => (
   <StyledWrapper>
     <InnerWrapper activeColor={cardType}>
-      <StyledHeading>First note</StyledHeading>
-      <DateInfo>3 days</DateInfo>
-      {cardType === 'twitter' && <StyledAvatar src="https://avatars.io/twitter/dan_abramov" />}
-      {cardType === 'article' && (
-        <StyledLinkButton href="https://www.youtube.com/channel/UCVhEjiCLn2v4MEt3Q4T2iaA" />
-      )}
+      <StyledHeading>{title}</StyledHeading>
+      <DateInfo>{created}</DateInfo>
+      {cardType === 'twitter' && <StyledAvatar src={`https://avatars.io/twitter/${twitterName}`} />}
+      {cardType === 'article' && <StyledLinkButton href={articleUrl} />}
     </InnerWrapper>
     <InnerWrapper flex>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo ducimus fuga
-        repellendus illum
-      </Paragraph>
+      <Paragraph>{content}</Paragraph>
       <Button secondary>REMOVE</Button>
     </InnerWrapper>
   </StyledWrapper>
@@ -92,10 +88,17 @@ const Card = ({ cardType }) => (
 
 Card.propTypes = {
   cardType: PropTypes.oneOf(['note', 'twitter', 'article']),
+  title: PropTypes.string.isRequired,
+  created: PropTypes.string.isRequired,
+  twitterName: PropTypes.string,
+  articleUrl: PropTypes.string,
+  content: PropTypes.string.isRequired,
 };
 
 Card.defaultProps = {
   cardType: 'note',
+  twitterName: null,
+  articleUrl: null,
 };
 
 export default Card;
