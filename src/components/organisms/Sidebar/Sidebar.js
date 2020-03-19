@@ -44,7 +44,7 @@ const Sidebar = ({ pageType }) => (
     </div>
 
     <div>
-      <ButtonIcon exact as={NavLink} to="/" icon={penIcon} activeClassName="active" />
+      <ButtonIcon exact as={NavLink} to="/notes" icon={penIcon} activeClassName="active" />
       <ButtonIcon as={NavLink} to="/twitters" icon={twitterIcon} activeClassName="active" />
       <ButtonIcon as={NavLink} to="/articles" icon={bulbIcon} activeClassName="active" />
     </div>
@@ -54,7 +54,11 @@ const Sidebar = ({ pageType }) => (
 );
 
 Sidebar.propTypes = {
-  pageType: PropTypes.string.isRequired,
+  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+};
+
+Sidebar.defaultProps = {
+  pageType: 'notes',
 };
 
 export default Sidebar;
