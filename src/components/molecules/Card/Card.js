@@ -104,10 +104,6 @@ class Card extends Component {
   }
 }
 
-// const Card = ({ cardType, title, created, twitterName, articleUrl, content }) => (
-
-// );
-
 Card.propTypes = {
   id: PropTypes.string.isRequired,
   cardType: PropTypes.oneOf(['notes', 'twitters', 'articles']),

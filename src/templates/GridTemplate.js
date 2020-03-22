@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Input from 'components/atoms/Input/Input';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import UserPageTemplate from './UserPageTemplate';
+import UserPageTemplate from 'templates/UserPageTemplate';
 
 const StyledWrapper = styled.div`
   padding: 25px 150px 25px 80px;
@@ -55,4 +55,5 @@ GridTemplate.propTypes = {
 GridTemplate.defaultProps = {
   pageType: 'notes',
 };
+
 export default GridTemplate;
