@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import GridTemplate from '../templates/GridTemplate';
 
 const Notes = ({ notes }) => (
-  <GridTemplate pageType="notes">
+  <GridTemplate>
     {notes.map(({ title, content, created, id }) => (
       <Card id={id} cardType="notes" title={title} content={content} created={created} key={id} />
     ))}

@@ -7,6 +7,7 @@ import logoutIcon from 'assets/icons/logout.svg';
 import twitterIcon from 'assets/icons/twitter.svg';
 import penIcon from 'assets/icons/pen.svg';
 import PropTypes from 'prop-types';
+import withContext from 'hoc/withContext';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -36,8 +37,8 @@ const NewWords = styled(Words)`
   margin-left: 50px;
 `;
 
-const Sidebar = ({ pageType }) => (
-  <StyledWrapper activeColor={pageType}>
+const Sidebar = ({ pageContext }) => (
+  <StyledWrapper activeColor={pageContext}>
     <div>
       <NewWords>RELIEVE THE </NewWords>
       <Words>BOREDOM !!!</Words>
@@ -54,11 +55,11 @@ const Sidebar = ({ pageType }) => (
 );
 
 Sidebar.propTypes = {
-  pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+  pageContext: PropTypes.oneOf(['notes', 'twitters', 'articles']),
 };
 
 Sidebar.defaultProps = {
-  pageType: 'notes',
+  pageContext: 'notes',
 };
 
-export default Sidebar;
+export default withContext(Sidebar);
