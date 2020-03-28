@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import DetailsTemplate from 'templates/DetailsTemplate';
 import { routes } from 'routes';
 
+import withContext from 'hoc/withContext';
+// import { connect } from 'react-redux';
+
 class DetailsPage extends Component {
   state = {
     pageType: 'notes',
@@ -29,12 +32,12 @@ class DetailsPage extends Component {
   render() {
     const dummyArticle = {
       id: 1,
-      title: 'Wake me up when Vue ends',
+      title: 'Example',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      twitterName: 'hello_roman',
-      articleUrl: 'https://youtube.com/helloroman',
-      created: '1 day',
+      twitterName: 'reactjs',
+      articleUrl: 'https://medium.com/search?q=programming',
+      created: '1 day ago',
     };
 
     const { pageType } = this.state;
@@ -56,4 +59,4 @@ DetailsPage.propTypes = {
   match: PropTypes.string.isRequired,
 };
 
-export default DetailsPage;
+export default withContext(DetailsPage);

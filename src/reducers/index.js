@@ -2,45 +2,43 @@ const initialState = {
   twitters: [
     {
       id: 1,
-      title: 'Hello Roman',
+      title: 'React',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '1 day',
-      twitterName: 'hello_roman',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animiDelDelectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animiDelectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animiectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      created: '1 day ago',
+      twitterName: 'reactjs',
     },
     {
       id: 2,
-      title: 'Redux guy',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '1 day',
+      title: 'Redux',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.  animi',
+      created: '3 days ago',
       twitterName: 'dan_abramov',
     },
     {
       id: 3,
-      title: 'React router stuff',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '5 days',
+      title: 'React router',
+      content: ' Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
+      created: '5 days ago',
       twitterName: 'mjackson',
     },
     {
       id: 4,
-      title: 'Super animacje!',
+      title: 'React training',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '10 days',
-      twitterName: 'sarah_edo',
+      created: '10 days ago',
+      twitterName: 'RyanFlorence',
     },
   ],
   articles: [
     {
       id: 1,
-      title: 'Hello Roman',
+      title: 'Hello',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '1 day',
-      articleUrl: 'https://youtube.com/helloroman',
+      created: '2 days ago',
+      articleUrl: 'https://medium.com/search?q=programming',
     },
   ],
   notes: [
@@ -49,7 +47,7 @@ const initialState = {
       title: 'Lorem ipsum',
       content:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
-      created: '1 day',
+      created: '1 day ago',
     },
   ],
 };
