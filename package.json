@@ -2,6 +2,7 @@
   "name": "01",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ambitious156288.github.io/React-project/",
   "dependencies": {
     "@storybook/addon-knobs": "^5.3.14",
     "axios": "^0.19.2",
@@ -16,6 +17,8 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
