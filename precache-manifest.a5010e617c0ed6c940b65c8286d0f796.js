@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "37b4e6ca094e2dd83dfa",
-    "url": "/React-project/static/js/main.e7d913ad.chunk.js"
+    "revision": "2f16ce5beee95504e97c",
+    "url": "/React-project/static/js/main.e05713de.chunk.js"
   },
   {
     "revision": "8b2975c314b850aa349c",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/React-project/static/media/plus.e43ce6c8.svg"
   },
   {
-    "revision": "04bee4447b8c723266c21bb1eee809bc",
+    "revision": "386f3ed9a4f65d17110c25579d1ffe44",
     "url": "/React-project/index.html"
   }
 ];
