@@ -12,7 +12,7 @@ import LoginPage from 'views/LoginPage';
 
 const Root = () => (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
       <MainTemplate>
         <Switch>
           <Route extact path={routes.login} component={LoginPage} />
